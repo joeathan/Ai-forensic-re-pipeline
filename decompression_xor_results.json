@@ -1,0 +1,107 @@
+[
+  {
+    "filename": "payload_01.bin",
+    "decompression": [],
+    "xor_hits": [
+      {
+        "key": "0x55",
+        "entropy": 5.284,
+        "preview": "\u001a \u001ec&\u0002b?\u05e3?|\u007f5\n\u000b\u000b+h;!\u001a \u001ec&\u0002b?\u05e3?"
+      },
+      {
+        "key": "0xaa",
+        "entropy": 5.284,
+        "preview": "yCUwLED]\u0013\f\u0013\u0003\u0010G(\u0007HQI(\\\u0015G\u0007sqt\u001d[w\u0014qwLw]\u0007H\rHU\\I\u0517qyyCUwLED]\u0013\f\u0013\u0003\u0010G(\u0007HQI(\\\u0015G"
+      },
+      {
+        "key": "0xff",
+        "entropy": 5.284,
+        "preview": ",\u0016\u0000\"\u0019\u0010\u0011\bFYFVE\u0012}R\u001d\u0004\u001c}\t@\u0012R&$!H\u000e\"A$\"\u0019\"\bR\u001dX\u001d\u0000\t\u001c$,,\u0016\u0000\"\u0019\u0010\u0011\bFYFVE\u0012}R\u001d\u0004\u001c}\t@\u0012"
+      }
+    ]
+  },
+  {
+    "filename": "payload_02.bin",
+    "decompression": [],
+    "xor_hits": [
+      {
+        "key": "0x55",
+        "entropy": 5.2213,
+        "preview": "|\u007f5\n\u000b\u000b+h;!\u001a \u001ec&\u0002b?\u05e3?|\u007f5\n\u000b\u000b+h;!"
+      },
+      {
+        "key": "0xaa",
+        "entropy": 5.2213,
+        "preview": "\u0007sqt\u001d[w\u0014qwLw]\u0007H\rHU\\I\u0517qyyCUwLED]\u0013\f\u0013\u0003\u0010G(\u0007HQI(\\\u0015G\u0007sqt\u001d[w\u0014qwLw]\u0007H\rHU\\I\u0517qy"
+      },
+      {
+        "key": "0xff",
+        "entropy": 5.2213,
+        "preview": "R&$!H\u000e\"A$\"\u0019\"\bR\u001dX\u001d\u0000\t\u001c$,,\u0016\u0000\"\u0019\u0010\u0011\bFYFVE\u0012}R\u001d\u0004\u001c}\t@\u0012R&$!H\u000e\"A$\"\u0019\"\bR\u001dX\u001d\u0000\t\u001c$,"
+      }
+    ]
+  },
+  {
+    "filename": "payload_03.bin",
+    "decompression": [],
+    "xor_hits": [
+      {
+        "key": "0x55",
+        "entropy": 5.284,
+        "preview": "\u001a \u001ec&\u0002b?\u05e3?|\u007f5\n\u000b\u000b+h;!\u001a \u001ec&\u0002b?\u05e3?"
+      },
+      {
+        "key": "0xaa",
+        "entropy": 5.284,
+        "preview": "yCUwLED]\u0013\f\u0013\u0003\u0010G(\u0007HQI(\\\u0015G\u0007sqt\u001d[w\u0014qwLw]\u0007H\rHU\\I\u0517qyyCUwLED]\u0013\f\u0013\u0003\u0010G(\u0007HQI(\\\u0015G"
+      },
+      {
+        "key": "0xff",
+        "entropy": 5.284,
+        "preview": ",\u0016\u0000\"\u0019\u0010\u0011\bFYFVE\u0012}R\u001d\u0004\u001c}\t@\u0012R&$!H\u000e\"A$\"\u0019\"\bR\u001dX\u001d\u0000\t\u001c$,,\u0016\u0000\"\u0019\u0010\u0011\bFYFVE\u0012}R\u001d\u0004\u001c}\t@\u0012"
+      }
+    ]
+  },
+  {
+    "filename": "payload_04.bin",
+    "decompression": [],
+    "xor_hits": [
+      {
+        "key": "0x55",
+        "entropy": 5.2213,
+        "preview": "|\u007f5\n\u000b\u000b+h;!\u001a \u001ec&\u0002b?\u05e3?|\u007f5\n\u000b\u000b+h;!"
+      },
+      {
+        "key": "0xaa",
+        "entropy": 5.2213,
+        "preview": "\u0007sqt\u001d[w\u0014qwLw]\u0007H\rHU\\I\u0517qyyCUwLED]\u0013\f\u0013\u0003\u0010G(\u0007HQI(\\\u0015G\u0007sqt\u001d[w\u0014qwLw]\u0007H\rHU\\I\u0517qy"
+      },
+      {
+        "key": "0xff",
+        "entropy": 5.2213,
+        "preview": "R&$!H\u000e\"A$\"\u0019\"\bR\u001dX\u001d\u0000\t\u001c$,,\u0016\u0000\"\u0019\u0010\u0011\bFYFVE\u0012}R\u001d\u0004\u001c}\t@\u0012R&$!H\u000e\"A$\"\u0019\"\bR\u001dX\u001d\u0000\t\u001c$,"
+      }
+    ]
+  },
+  {
+    "filename": "payload_05.bin",
+    "decompression": [],
+    "xor_hits": [
+      {
+        "key": "0x55",
+        "entropy": 5.284,
+        "preview": "\u001a \u001ec&\u0002b?\u05e3?|\u007f5\n\u000b\u000b+h;!\u001a \u001ec&\u0002b?\u05e3?"
+      },
+      {
+        "key": "0xaa",
+        "entropy": 5.284,
+        "preview": "yCUwLED]\u0013\f\u0013\u0003\u0010G(\u0007HQI(\\\u0015G\u0007sqt\u001d[w\u0014qwLw]\u0007H\rHU\\I\u0517qyyCUwLED]\u0013\f\u0013\u0003\u0010G(\u0007HQI(\\\u0015G"
+      },
+      {
+        "key": "0xff",
+        "entropy": 5.284,
+        "preview": ",\u0016\u0000\"\u0019\u0010\u0011\bFYFVE\u0012}R\u001d\u0004\u001c}\t@\u0012R&$!H\u000e\"A$\"\u0019\"\bR\u001dX\u001d\u0000\t\u001c$,,\u0016\u0000\"\u0019\u0010\u0011\bFYFVE\u0012}R\u001d\u0004\u001c}\t@\u0012"
+      }
+    ]
+  }
+]

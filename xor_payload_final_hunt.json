@@ -1,0 +1,42 @@
+[
+  {
+    "file": "payload_01_xor_cc.bin",
+    "matches": {
+      "JWT": [
+        "a.k.3"
+      ]
+    }
+  },
+  {
+    "file": "payload_02_xor_cc.bin",
+    "matches": {
+      "JWT": [
+        "a.k.3"
+      ]
+    }
+  },
+  {
+    "file": "payload_03_xor_cc.bin",
+    "matches": {
+      "JWT": [
+        "a.k.3"
+      ]
+    }
+  },
+  {
+    "file": "payload_04_xor_cc.bin",
+    "matches": {
+      "JWT": [
+        "a.k.3"
+      ]
+    }
+  },
+  {
+    "file": "payload_05_xor_cc.bin",
+    "matches": {
+      "JWT": [
+        "a.k.3"
+      ]
+    }
+  }
+]

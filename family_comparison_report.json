@@ -1,0 +1,47 @@
+[
+  {
+    "filename": "payload_01.bin",
+    "matched_families": [
+      "Redline Stealer"
+    ],
+    "evidence_notes": [
+      "Redline Stealer: matched XOR key 0x55"
+    ]
+  },
+  {
+    "filename": "payload_02.bin",
+    "matched_families": [
+      "Redline Stealer"
+    ],
+    "evidence_notes": [
+      "Redline Stealer: matched XOR key 0x55"
+    ]
+  },
+  {
+    "filename": "payload_03.bin",
+    "matched_families": [
+      "Redline Stealer"
+    ],
+    "evidence_notes": [
+      "Redline Stealer: matched XOR key 0x55"
+    ]
+  },
+  {
+    "filename": "payload_04.bin",
+    "matched_families": [
+      "Redline Stealer"
+    ],
+    "evidence_notes": [
+      "Redline Stealer: matched XOR key 0x55"
+    ]
+  },
+  {
+    "filename": "payload_05.bin",
+    "matched_families": [
+      "Redline Stealer"
+    ],
+    "evidence_notes": [
+      "Redline Stealer: matched XOR key 0x55"
+    ]
+  }
+]
