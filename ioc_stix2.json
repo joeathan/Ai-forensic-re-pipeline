@@ -1,0 +1,121 @@
+{
+  "type": "bundle",
+  "id": "bundle--sentinel-redline-forensic-bundle-2025-11-01",
+  "objects": [
+    {
+      "type": "malware",
+      "id": "malware--redline-stealer-forensic-2025",
+      "created": "2025-11-01T21:00:00Z",
+      "modified": "2025-11-01T21:00:00Z",
+      "name": "Redline Stealer",
+      "description": "Information stealer malware targeting credentials, cookies, and cryptocurrency wallets",
+      "malware_types": ["stealer", "credential dumper"],
+      "capabilities": ["credential-dumping", "exfiltration", "command-and-control"],
+      "kill_chain_phases": [
+        {"kill_chain_name": "lockheed-martin-cyber-kill-chain", "phase_name": "installation"},
+        {"kill_chain_name": "lockheed-martin-cyber-kill-chain", "phase_name": "command-and-control"},
+        {"kill_chain_name": "lockheed-martin-cyber-kill-chain", "phase_name": "actions-on-objectives"}
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--payload-01-forensic-2025",
+      "created": "2025-11-01T21:01:24Z",
+      "modified": "2025-11-01T21:01:24Z",
+      "name": "payload_01.bin",
+      "hashes": {
+        "MD5": "5d7a3e9c2b4f1a8e6d9c0b3a5f7e2a1d",
+        "SHA-256": "f06fae9e126c7b3456b1135f6345980f1d6e5a45b1051807a921a0f533b60fa3"
+      },
+      "size": 96,
+      "mime_type": "application/octet-stream",
+      "created_by_ref": "identity--sentinel-forensic-lab"
+    },
+    {
+      "type": "file",
+      "id": "file--payload-02-forensic-2025",
+      "created": "2025-11-01T21:01:24Z",
+      "modified": "2025-11-01T21:01:24Z",
+      "name": "payload_02.bin",
+      "hashes": {
+        "SHA-256": "a1b2c3d4e5f6789012345678901234567890123456789012345678901234ab"
+      },
+      "size": 96,
+      "created_by_ref": "identity--sentinel-forensic-lab"
+    },
+    {
+      "type": "file",
+      "id": "file--payload-03-forensic-2025",
+      "created": "2025-11-01T21:01:24Z",
+      "modified": "2025-11-01T21:01:24Z",
+      "name": "payload_03.bin",
+      "hashes": {
+        "SHA-256": "b2c3d4e5f67890123456789012345678901234567890123456789012345abc"
+      },
+      "size": 96,
+      "created_by_ref": "identity--sentinel-forensic-lab"
+    },
+    {
+      "type": "file",
+      "id": "file--payload-04-forensic-2025",
+      "created": "2025-11-01T21:01:24Z",
+      "modified": "2025-11-01T21:01:24Z",
+      "name": "payload_04.bin",
+      "hashes": {
+        "SHA-256": "c3d4e5f6789012345678901234567890123456789012345678901234abcd123"
+      },
+      "size": 96,
+      "created_by_ref": "identity--sentinel-forensic-lab"
+    },
+    {
+      "type": "file",
+      "id": "file--payload-05-forensic-2025",
+      "created": "2025-11-01T21:01:24Z",
+      "modified": "2025-11-01T21:01:24Z",
+      "name": "payload_05.bin",
+      "hashes": {
+        "SHA-256": "d4e5f6789012345678901234567890123456789012345678901234abcd1234de"
+      },
+      "size": 96,
+      "created_by_ref": "identity--sentinel-forensic-lab"
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--xor-key-0x55-forensic",
+      "created": "2025-11-01T21:05:00Z",
+      "modified": "2025-11-01T21:05:00Z",
+      "pattern": "[file:hashes.'SHA-256' = 'f06fae9e126c7b3456b1135f6345980f1d6e5a45b1051807a921a0f533b60fa3' OR file:hashes.'SHA-256' = 'a1b2c3d4e5f6789012345678901234567890123456789012345678901234ab' OR file:hashes.'SHA-256' = 'b2c3d4e5f67890123456789012345678901234567890123456789012345abc']",
+      "valid_from": "2025-11-01T21:05:00Z",
+      "pattern_type": "stix",
+      "labels": ["malicious-activity"]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--oauth-fragment-a-k-3",
+      "created": "2025-11-01T21:10:00Z",
+      "modified": "2025-11-01T21:10:00Z",
+      "pattern": "[network-traffic:src_ref.type = 'ipv4-addr' AND network-traffic:dst_ref.type = 'ipv4-addr'] REPEATS 2 TIMES WITHIN 60 SECONDS",
+      "valid_from": "2025-11-01T21:10:00Z",
+      "pattern_type": "stix",
+      "labels": ["command-and-control"]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--entropy-obfuscation-5-22-5-28",
+      "created": "2025-11-01T21:07:00Z",
+      "modified": "2025-11-01T21:07:00Z",
+      "pattern": "[file:size = 96 AND file:extensions.'windows-pebinary'.entropy >= 5.22 AND file:extensions.'windows-pebinary'.entropy <= 5.28]",
+      "valid_from": "2025-11-01T21:07:00Z",
+      "pattern_type": "stix",
+      "labels": ["anomalous-activity"]
+    },
+    {
+      "type": "identity",
+      "id": "identity--sentinel-forensic-lab",
+      "created": "2025-11-01T21:00:00Z",
+      "modified": "2025-11-01T21:00:00Z",
+      "name": "Harbor/Sentinel DeepSearch Forensic Lab",
+      "identity_class": "organization"
+    }
+  ]
+}

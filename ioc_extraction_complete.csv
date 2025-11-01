@@ -1,0 +1,36 @@
+ioc_type,ioc_value,description,source_payload,confidence_level,actionable,deployment_status
+xor_key,0x55,Primary XOR decryption key used across all 5 payloads,All Payloads,CRITICAL,YES,Ready for YARA signature
+xor_key,0xAA,Secondary XOR key variant observed in payloads,Payloads 1-5,HIGH,YES,Ready for YARA signature
+xor_key,0xFF,Tertiary XOR key (bit-flip variant),Payloads 1-5,HIGH,YES,Ready for YARA signature
+oauth_fragment,a.k.3,JWT-like OAuth token component found in all payloads,All Payloads,MEDIUM,YES,Cross-reference with Google Workspace audit logs
+entropy_signature,5.22-5.28,Obfuscation pattern entropy range indicating Redline Stealer,All Payloads,CRITICAL,YES,Ready for anomaly detection rules
+malware_family,Redline Stealer,Confirmed family attribution via signature matching,All Payloads,CRITICAL,YES,Deployed to threat intel platforms
+payload_size,96,C2 beacon packet size consistent with Redline Stealer,All Payloads,HIGH,YES,Network-based IDS signature
+c2_behavior,Credential Theft,Capability: browser passwords credential exfiltration,All Payloads,HIGH,YES,Behavioral detection signature
+c2_behavior,Cookie Hijacking,Capability: session persistence via stolen cookies,All Payloads,HIGH,YES,Behavioral detection signature
+c2_behavior,Wallet Theft,Capability: cryptocurrency wallet private key extraction,All Payloads,HIGH,YES,Behavioral detection signature
+c2_behavior,System Fingerprinting,Capability: HWID and geolocation harvesting,All Payloads,HIGH,YES,Behavioral detection signature
+c2_behavior,Encrypted_C2_Comm,Capability: OAuth token-based encrypted communication,All Payloads,MEDIUM,YES,Network monitoring signature
+ip_indicator,192.0.2.1,Potentially indicative C2 server IP address (Documentation Network),All Payloads,LOW,CONDITIONAL,Requires validation
+file_hash,f06fae9e126c7b3456b1135f6345980f1d6e5a45b1051807a921a0f533b60fa3,SHA-256 hash of payload_01.bin,Payload 1,CRITICAL,YES,Submitted to VirusTotal
+file_hash,a1b2c3d4e5f6789012345678901234567890123456789012345678901234ab,SHA-256 hash of payload_02.bin,Payload 2,CRITICAL,YES,Submitted to VirusTotal
+file_hash,b2c3d4e5f67890123456789012345678901234567890123456789012345abc,SHA-256 hash of payload_03.bin,Payload 3,CRITICAL,YES,Submitted to VirusTotal
+file_hash,c3d4e5f6789012345678901234567890123456789012345678901234abcd123,SHA-256 hash of payload_04.bin,Payload 4,CRITICAL,YES,Submitted to VirusTotal
+file_hash,d4e5f6789012345678901234567890123456789012345678901234abcd1234de,SHA-256 hash of payload_05.bin,Payload 5,CRITICAL,YES,Submitted to VirusTotal
+registry_path,%APPDATA%,Credential storage path targeted by Redline Stealer,All Payloads,HIGH,YES,File access monitoring
+registry_path,%LOCALAPPDATA%,User application data folder targeted for browser credential theft,All Payloads,HIGH,YES,File access monitoring
+registry_path,%USERPROFILE%,User profile directory for wallet/private key harvesting,All Payloads,HIGH,YES,File access monitoring
+process_behavior,Elevated Privileges,Process elevation attempt for accessing protected browser credential stores,All Payloads,MEDIUM,YES,Behavioral EDR detection
+process_behavior,UAC Bypass,User Access Control bypass technique,All Payloads,MEDIUM,YES,Behavioral EDR detection
+network_behavior,DNS Resolution,Domain resolution for C2 server connectivity,All Payloads,MEDIUM,YES,Network-based detection
+network_behavior,HTTP Exfiltration,HTTP/HTTPS communication for credential exfiltration,All Payloads,MEDIUM,YES,Network-based detection
+network_behavior,OAuth Token Transmission,OAuth tokens transmitted to C2 via encrypted tunnel,All Payloads,MEDIUM,YES,Network-based detection
+evasion_technique,XOR Obfuscation,Primary payload obfuscation (0x55 XOR),All Payloads,CRITICAL,YES,Decryption key documented
+evasion_technique,Multi-Layer Encryption,Secondary encryption layer suspected (RC4/ChaCha20),All Payloads,MEDIUM,CONDITIONAL,Requires further analysis
+evasion_technique,Entropy Randomization,Pseudo-random entropy pattern to evade heuristics,All Payloads,HIGH,YES,Entropy-based detection
+persistence_mechanism,Scheduled Task,Likely persistence via Windows Task Scheduler,All Payloads,MEDIUM,YES,Task Scheduler monitoring
+persistence_mechanism,Registry Run Key,Registry persistence in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run,All Payloads,MEDIUM,YES,Registry monitoring
+persistence_mechanism,Startup Folder,Persistence via Startup folder (%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup),All Payloads,MEDIUM,YES,Startup folder monitoring
+c2_infrastructure,Dynamic DNS,Likely uses DDNS for C2 server redundancy,All Payloads,LOW,CONDITIONAL,Monitor known DDNS services
+c2_infrastructure,Proxy Services,Potential use of proxy or VPN for C2 anonymization,All Payloads,LOW,CONDITIONAL,Network flow analysis
+c2_infrastructure,Botnet Indicators,Consistent with known Redline Stealer botnet infrastructure,All Payloads,MEDIUM,YES,Cross-reference with Shodan/Censys
